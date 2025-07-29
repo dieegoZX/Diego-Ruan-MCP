@@ -1,13 +1,15 @@
 const express = require("express");
 const app = express();
-const routes = require("./routes/route");
+
+// Corrija aqui: caminho certo para protocol/routes.js
+const routes = require("./protocol/routes");
 
 const PORT = process.env.PORT || 3000;
 
-app.use("/api", routes); // base path "/api"
+app.use("/api", routes);
 
 app.get("/", (req, res) => {
-  res.send("API de Modelos Jeep e Ram rodando! 🚗");
+  res.send("API rodando com sucesso 🚀");
 });
 
 app.listen(PORT, () => {
