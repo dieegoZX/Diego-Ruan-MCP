@@ -49,7 +49,7 @@ const Rammodels = [
       "Design esportivo com suspensão reforçada",
       "Tração AWD com controle de tração avançado",
       "Motor turbo flex potente",
-      "Central multimídia vertical de 10,3""
+      "Central multimídia vertical de 10,3"
     ],
     "ficha_tecnica": {
       "motor": "2.0L Turbo Flex",
