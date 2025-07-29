@@ -1,5 +1,4 @@
 const Rammodels = [
-[
   {
     "marca": "Ram",
     "modelo": "Ram 1500 Limited",
@@ -85,3 +84,5 @@ const Rammodels = [
     }
   }
 ]
+
+module.exports = Rammodels
