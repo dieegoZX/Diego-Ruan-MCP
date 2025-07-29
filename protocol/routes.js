@@ -1,21 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
-// Importar os dados
+// Importando os modelos
 const jeepModels = require('./Jeepmodels');
 const ramModels = require('./Rammodels');
 
-// Rota principal de teste
+// Rota principal de verificação
 router.get('/', (req, res) => {
-  res.send('🛠️ API Model Context Protocol - Ativa!');
+  res.send('🚗 API MCP - Jeep & Ram pronta para uso!');
 });
 
-// Rota para modelos Jeep
+// Jeep
 router.get('/jeep', (req, res) => {
   res.json(jeepModels);
 });
 
-// Rota para modelos Ram (incluindo Rampage)
+// Ram (inclui Rampage)
 router.get('/ram', (req, res) => {
   res.json(ramModels);
 });
