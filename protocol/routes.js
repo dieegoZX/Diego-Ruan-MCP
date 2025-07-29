@@ -7,7 +7,7 @@ const ramModels = require('./Rammodels');
 
 // Rota principal de verificação
 router.get('/', (req, res) => {
-  res.send('🚗 API MCP - Jeep & Ram pronta para uso!');
+  res.send('🚗 API MCP2 - Jeep & Ram pronta para uso!');
 });
 
 // Jeep
