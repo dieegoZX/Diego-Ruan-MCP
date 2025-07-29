@@ -4,7 +4,7 @@ const jeepModels = require('../data/jeepModels')
 
 // Rota inicial
 router.get('/', (req, res) => {
-  res.send('API Jeep MCP funcionando 🚗💨')
+  res.send('MCP Diego Ruan | Jeep MCP funcionando 🚗💨')
 })
 
 // Rota para obter todos os modelos da Jeep
