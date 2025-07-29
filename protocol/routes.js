@@ -1,22 +1,16 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-// Importando os modelos
-const jeepModels = require('./Jeepmodels');
-const ramModels = require('./Rammodels');
+const jeepModels = require("./Jeepmodels");
+const ramModels = require("./ramModels"); // <-- Nome correto com r minúsculo e M maiúsculo
 
-// Rota principal de verificação
-router.get('/', (req, res) => {
-  res.send('🚗 API MCP2 - Jeep & Ram pronta para uso!');
-});
-
-// Jeep
-router.get('/jeep', (req, res) => {
+// Rota para /jeep
+router.get("/jeep", (req, res) => {
   res.json(jeepModels);
 });
 
-// Ram (inclui Rampage)
-router.get('/ram', (req, res) => {
+// Rota para /ram
+router.get("/ram", (req, res) => {
   res.json(ramModels);
 });
 
