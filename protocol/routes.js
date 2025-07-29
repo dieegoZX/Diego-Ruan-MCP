@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
-const jeepModels = require("./Jeepmodels");
-const ramModels = require("./ramModels"); // <-- Nome correto com r minúsculo e M maiúsculo
+const jeepModels = require("../models/Jeepmodels");
+const ramModels = require("../models/ramModels");
 
-// Rota para /jeep
+// Rota para /api/jeep
 router.get("/jeep", (req, res) => {
   res.json(jeepModels);
 });
 
-// Rota para /ram
+// Rota para /api/ram
 router.get("/ram", (req, res) => {
   res.json(ramModels);
 });
