@@ -1,26 +1,23 @@
-const express = require('express')
-const router = express.Router()
-const jeepModels = require('../data/jeepModels')
+const express = require('express');
+const router = express.Router();
 
-// Rota inicial
+// Importar os dados
+const jeepModels = require('./Jeepmodels');
+const ramModels = require('./Rammodels');
+
+// Rota principal de teste
 router.get('/', (req, res) => {
-  res.send('MCP Diego Ruan | Jeep MCP funcionando 🚗💨')
-})
+  res.send('🛠️ API Model Context Protocol - Ativa!');
+});
 
-// Rota para obter todos os modelos da Jeep
+// Rota para modelos Jeep
 router.get('/jeep', (req, res) => {
-  res.json(jeepModels)
-})
+  res.json(jeepModels);
+});
 
-// Rota para obter um modelo específico por nome
-router.get('/jeep/:nome', (req, res) => {
-  const modelo = jeepModels.find(
-    (m) => m.nome.toLowerCase() === req.params.nome.toLowerCase()
-  )
+// Rota para modelos Ram (incluindo Rampage)
+router.get('/ram', (req, res) => {
+  res.json(ramModels);
+});
 
-  if (!modelo) return res.status(404).json({ erro: 'Modelo não encontrado' })
-
-  res.json(modelo)
-})
-
-module.exports = router
+module.exports = router;
